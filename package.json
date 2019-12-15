@@ -1,0 +1,17 @@
+{
+  "name": "backstop-config",
+  "description": "sample project with a simple implementation of backstopjs tests",
+  "version": "1.0.0",
+  "scripts": {
+    "backstop:approve": "backstop approve --config=test/mainConfig.js",
+    "backstop:test": "npm run clean:bitmaps_test && backstop test --config=test/mainConfig.js",
+    "clean:bitmaps_test": "rmdir /S /Q test\\backstop_data\\bitmaps_test",
+    "test": "npm run backstop:test",
+    "test:docker": "npm run clean:bitmaps_test && backstop test --config=test/mainConfig.js --docker"
+  },
+  "author": "Jefferson Melo <jefferson.mello8@hotmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "backstopjs": "^3.8.5"
+  }
+}
